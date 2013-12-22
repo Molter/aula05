@@ -39,10 +39,12 @@ public class CheckBoxedAdapter extends BaseAdapter {
 	public void refreshData(Context context) {
 		mHelper = new DbHelper(context);
 		
+		itens.clear();
+		
 		SQLiteDatabase db = mHelper.getWritableDatabase();
 		
 		Cursor results = db.query("shop_itens",
-				new String[]{"name", "description","checked","file"},
+				new String[]{"_id", "name", "description","checked","file"},
 				null,
 				null,
 				null,
@@ -56,7 +58,7 @@ public class CheckBoxedAdapter extends BaseAdapter {
 		
 		results.moveToFirst( );
 		
-		while (results.moveToNext()) {
+		do{
 			ShopItem item = new ShopItem();
 			
 			long id = results.getLong(results.getColumnIndex("_id"));
@@ -79,7 +81,7 @@ public class CheckBoxedAdapter extends BaseAdapter {
 			}
 			
 			itens.add(item);
-		};
+		}while (results.moveToNext());
 		
 		notifyDataSetChanged();
 		
