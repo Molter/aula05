@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HomeWork03V2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="new_item_menu">Novo Item</string>
+    <string name="nome">Nome</string>
+    <string name="description">Descrição</string>
+    <string name="save">Salvar</string>
+    <string name="save_success">Salvo com sucesso</string>
+    
+    <string name="save_error">Preencha os campos obrigatórias</string>
+    <string name="delete_item_menu">Deletar Registro</string>
+    
+    
+
+</resources>
