@@ -9,10 +9,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.NumberPicker;
 
 public class MainActivity extends Activity {
 
-	CheckBoxedAdapter adapter; 
+	CheckBoxedAdapter adapter;
+	 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,8 @@ public class MainActivity extends Activity {
 		
 		adapter = new CheckBoxedAdapter(this); 
 		listView.setAdapter(adapter);
+		
+		
 		
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
